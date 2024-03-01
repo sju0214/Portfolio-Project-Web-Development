@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Seongyeong Ju</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png"> 
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <header>
+        <h1><img src="android-chrome-192x192.png" alt="Seongyeong Ju">Seongyeong Ju</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Order</h2> 
+            <article>
+                <p>Please place an order for pet products by filling out this form!</p>
+                <form action="/order" method="POST">
+                    <fieldset>
+                        <legend>Tell us about yourself!</legend>
+                        <p>
+                            <label for="fullName">Full Name
+                                <input type="text" 
+                                name="fullName" 
+                                id="fullName" 
+                                size="30" 
+                                maxlength="100" 
+                                required 
+                                placeholder="First and last name" 
+                                autofocus/>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="email">Email
+                                <input 
+                                type="email" 
+                                name="email" 
+                                id="email" 
+                                size="30" 
+                                maxlength="100" 
+                                required 
+                                pattern="[^ @]+@[^ @]+.[a-z]+"
+                                placeholder="name@host.com" />
+                            </label>
+                        </p>
+                        <p>
+                        <label for="address">Address
+                            <input 
+                            type="address" 
+                            name="address" 
+                            id="address" 
+                            size="30" 
+                            maxlength="100" 
+                            required 
+                            placeholder="123 Bell Street" />
+                        </label>
+                        </p>
+                        <p>
+                        <label for="delivery">Delivery Instructions</label>
+                            <textarea 
+                            name="delivery" 
+                            id="delivery" 
+                            minlenth="3" 
+                            maxlenth="250" 
+                            placeholder="Write 250 characters or less." 
+                            ></textarea>
+                        </p>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Pet Products for Sale</legend>
+                        <table>
+                            <caption>Please choose one of these products to purchase:</caption>
+                            <thead>
+                              <tr>
+                                <th>Company</th>
+                                <th>Product</th>
+                                <th>Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AGYM</td>
+                                    <td>
+                                        <label for="agym">
+                                        <input type="radio" required
+                                            name="productOrder"
+                                            id="agym"
+                                            value="Spinning Cat Scratcher Ball"
+                                        /> Spinning Cat Scratcher Ball
+                                        </label>
+                                    </td>
+                                    <td>$52.99</td>            
+                                </tr>
+                                <tr>
+                                    <td>Jasonwell</td>
+                                    <td>
+                                        <label for="jasonwell">
+                                        <input type="radio" required
+                                            name="productOrder"
+                                            id="jasonwell"
+                                            value="Foldable Dog Pool"
+                                        />Foldable Dog Pool
+                                        </label>
+                                    </td>
+                                    <td>$27.25</td>            
+                                </tr>
+                                <tr>
+                                    <td>Expawlorer</td>
+                                    <td>
+                                        <label for="expawlorer">
+                                        <input type="radio" required
+                                            name="productOrder"
+                                            id="expawlorer"
+                                            value="Dog Fence Window"
+                                        />Dog Fence Window
+                                        </label>
+                                    </td>
+                                    <td>$30.50</td>            
+                                </tr>
+                                <tr>
+                                    <td>Lollimeow</td>
+                                    <td>
+                                        <label for="lollimeow">
+                                        <input type="radio" required
+                                            name="productOrder"
+                                            id="lollimeow"
+                                            value="Capsule Pet Travel Backpack"
+                                        />Capsule Pet Travel Backpack
+                                        </label>
+                                    </td>
+                                    <td>$59.00</td>            
+                                </tr>
+                                <tr>
+                                    <td>Drool'd</td>
+                                    <td>
+                                        <label for="droold">
+                                        <input type="radio" required
+                                            name="productOrder"
+                                            id="droold"
+                                            value="Cat Hamster Wheel"
+                                        />Cat Hamster Wheel
+                                        </label>
+                                    </td>
+                                    <td>$349.75</td>            
+                                </tr>
+                            </tbody>
+                          </table>
+                        <br>
+    
+                        <p>
+                            <label for="quantity">Enter quantity between 1 and 99.</label>
+                                <textarea 
+                                name="quantity" 
+                                id="quantity" 
+                                minlenth="1" 
+                                maxlenth="2" 
+                                placeholder="Quantity" 
+                                ></textarea>
+                        </p>
+    
+                        <button type="submit">Submit Order</button>
+    
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>&copy; 2023 Seongyeong Ju</footer>
+</body>
+</html>
